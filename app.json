@@ -7,8 +7,10 @@
     "icon": "./assets/images/icon.png",
     "scheme": "naoshelter",
     "userInterfaceStyle": "automatic",
+    "jsEngine": "hermes",
     "ios": {
-      "icon": "./assets/expo.icon"
+      "icon": "./assets/expo.icon",
+      "jsEngine": "jsc"
     },
     "android": {
       "adaptiveIcon": {

@@ -1,15 +1,18 @@
 import { Box, Text } from '@/components/ui';
+import { Colors } from '@/constants/theme';
 import { useRouter } from 'expo-router';
-import { ScrollView, StyleSheet, TouchableOpacity } from 'react-native';
+import { ScrollView, StyleSheet, TouchableOpacity, useColorScheme } from 'react-native';
 
 export default function ComponentsIndexScreen() {
   const router = useRouter();
+  const scheme = useColorScheme();
+const colors = Colors[scheme === 'unspecified' ? 'light' : scheme];
 
   return (
     <ScrollView style={styles.container}>
       <Box padding={16}>
         <Text variant="title" style={styles.title}>Testing Sandbox</Text>
-        <Text variant="body" color="#60646C" style={styles.subtitle}>
+        <Text variant="body" color={colors.textSecondary} style={styles.subtitle}>
           Select a component list to test it in isolation before using it in the main project.
         </Text>
 
@@ -17,9 +20,9 @@ export default function ComponentsIndexScreen() {
           style={styles.listItem} 
           onPress={() => router.push('/components/buttons')}
         >
-          <Box padding={16} backgroundColor="#E0E1E6" borderRadius={8} margin={4}>
+          <Box padding={16} backgroundColor={colors.backgroundSelected} borderRadius={8} margin={4}>
             <Text weight="bold">1. Buttons</Text>
-            <Text variant="small" color="#60646C">Test various button variants and states</Text>
+            <Text variant="small" color={colors.textSecondary}>Test various button variants and states</Text>
           </Box>
         </TouchableOpacity>
 
@@ -27,9 +30,9 @@ export default function ComponentsIndexScreen() {
           style={styles.listItem} 
           onPress={() => router.push('/components/empty')}
         >
-          <Box padding={16} backgroundColor="#E0E1E6" borderRadius={8} margin={4}>
+          <Box padding={16} backgroundColor={colors.backgroundSelected} borderRadius={8} margin={4}>
             <Text weight="bold">2. Empty List</Text>
-            <Text variant="small" color="#60646C">Placeholder for future components</Text>
+            <Text variant="small" color={colors.textSecondary}>Placeholder for future components</Text>
           </Box>
         </TouchableOpacity>
       </Box>

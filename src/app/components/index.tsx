@@ -35,6 +35,16 @@ const colors = Colors[scheme === 'unspecified' ? 'light' : scheme];
             <Text variant="small" color={colors.textSecondary}>Placeholder for future components</Text>
           </Box>
         </TouchableOpacity>
+
+        <TouchableOpacity 
+          style={styles.listItem} 
+          onPress={() => router.push('/components/lottie')}
+        >
+          <Box padding={16} backgroundColor={colors.backgroundSelected} borderRadius={8} margin={4}>
+            <Text weight="bold">3. Lottie</Text>
+            <Text variant="small" color={colors.textSecondary}>Test Lottie animation components</Text>
+          </Box>
+        </TouchableOpacity>
       </Box>
     </ScrollView>
   );

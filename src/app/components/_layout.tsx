@@ -6,6 +6,7 @@ export default function ComponentsLayout() {
       <Stack.Screen name="index" options={{ title: 'Components' }} />
       <Stack.Screen name="buttons" options={{ title: 'Buttons Test' }} />
       <Stack.Screen name="empty" options={{ title: 'Empty' }} />
+      <Stack.Screen name="lottie" options={{ title: 'Lottie' }} />
     </Stack>
   );
 }

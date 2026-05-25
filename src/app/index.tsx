@@ -5,7 +5,7 @@ export default function HomeScreen() {
   return (
     <Box style={styles.container} padding={16}>
       <House size={48} color="#4A5568" style={{ marginBottom: 16 }} />
-      <Text variant="title" style={styles.title}>Home Dashboard</Text>
+      <Text variant="title" style={styles.title}>ARC⌗Σage</Text>
       <Text style={styles.content}>
         Welcome to the testing sandbox workspace. Switch to the Components tab to start isolated testing.
       </Text>

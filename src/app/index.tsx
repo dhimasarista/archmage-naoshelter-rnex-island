@@ -5,7 +5,7 @@ export default function HomeScreen() {
   return (
     <Box style={styles.container} padding={16}>
       <Box style={{
-        marginHorizontal: 16,
+        marginHorizontal: 12,
         marginBottom: 32,
       }}>
         <Logo width={300} />

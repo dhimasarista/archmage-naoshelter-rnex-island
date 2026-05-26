@@ -1,11 +1,15 @@
 import { Box, Text } from '@/components/ui';
-import { House } from 'lucide-react-native';
+import Logo from '@/components/ui/Logo';
 import { StyleSheet } from 'react-native';
 export default function HomeScreen() {
   return (
     <Box style={styles.container} padding={16}>
-      <House size={48} color="#4A5568" style={{ marginBottom: 16 }} />
-      <Text variant="title" style={styles.title}>ARC⌗Σage</Text>
+      <Box style={{
+        marginHorizontal: 16,
+        marginBottom: 32,
+      }}>
+        <Logo width={300} />
+      </Box>
       <Text style={styles.content}>
         Welcome to the testing sandbox workspace. Switch to the Components tab to start isolated testing.
       </Text>
